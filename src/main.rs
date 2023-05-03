@@ -51,3 +51,29 @@ async fn main() {
         tokio::time::sleep(Duration::from_secs(60)).await;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_validate_url_valid() {
+        assert!(validate_url("https://www.google.com"));
+        assert!(validate_url("http://localhost:8000"));
+    }
+
+    #[test]
+    fn test_validate_url_invalid() {
+        assert!(!validate_url("invalid-url"));
+    }
+
+    #[tokio::test]
+    async fn test_check_url_up() {
+        assert!(check_url("https://www.google.com").await);
+    }
+
+    #[tokio::test]
+    async fn test_check_url_down() {
+        assert!(!check_url("https://www.google.com/404").await);
+    }
+}
