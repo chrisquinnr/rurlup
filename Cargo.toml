@@ -2,6 +2,10 @@
 name = "rurl"
 version = "0.2.0"
 edition = "2021"
+description = "Simple CLI url checker that pings the target to see if its up"
+license = "MIT OR Apache-2.0"
+authors = ["Chris Quinn <chrisquinnr@gmail.com>"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 reqwest = "0.11.4"
