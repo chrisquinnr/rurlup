@@ -1,6 +1,6 @@
 [package]
 name = "rurlr"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 description = "Simple CLI url checker that pings the target to see if its up"
 license = "MIT OR Apache-2.0"
