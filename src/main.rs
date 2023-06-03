@@ -1,9 +1,9 @@
+use log::{error, info};
 use reqwest::StatusCode;
-use std::collections::HashMap;
-use std::time::Duration;
+use rustout::init_logger;
+use std::{collections::HashMap, time::Duration};
 use tokio;
 use url::Url;
-
 fn validate_url(url: &str) -> bool {
     match Url::parse(url) {
         Ok(_) => true,
@@ -20,6 +20,8 @@ async fn check_url(url: &str) -> bool {
 
 #[tokio::main]
 async fn main() {
+    init_logger();
+
     let mut urls = std::env::args().skip(1).collect::<Vec<_>>();
 
     // Validate the URLs and remove any invalid ones
@@ -41,9 +43,9 @@ async fn main() {
 
             // Notify the user if the URL is down
             if !is_up {
-                println!("{} is down!", url);
+                error!("{} is down!", url);
             } else {
-                println!("{} is up!", url);
+                info!("{} is up!", url);
             }
         }
 
