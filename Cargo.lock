@@ -758,9 +758,9 @@ dependencies = [
 
 [[package]]
 name = "rustout"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ccc6fe428fada9bb6bab1a347b38ab5fa4fd02fa6a0962b19ad8b571cb8aa30"
+checksum = "7831984138784dbb168db88b82b2ebbe0c3e7e6f4e3fb249578babb94c9d92a3"
 dependencies = [
  "ansi_term",
  "log",

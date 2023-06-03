@@ -1,4 +1,4 @@
-use log::{error, info};
+use log::{error, info, LevelFilter};
 use reqwest::StatusCode;
 use rustout::init_logger;
 use std::{collections::HashMap, time::Duration};
@@ -20,7 +20,7 @@ async fn check_url(url: &str) -> bool {
 
 #[tokio::main]
 async fn main() {
-    init_logger();
+    init_logger(LevelFilter::Debug);
 
     let mut urls = std::env::args().skip(1).collect::<Vec<_>>();
 
