@@ -1,4 +1,4 @@
-# RURLUP
+# RURLr
 Simple CLI app that accepts a list of URLs to perform an uptime check.
 
 ## Development

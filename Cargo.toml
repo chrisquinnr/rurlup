@@ -1,5 +1,5 @@
 [package]
-name = "rurl"
+name = "rurlr"
 version = "0.2.0"
 edition = "2021"
 description = "Simple CLI url checker that pings the target to see if its up"

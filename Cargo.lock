@@ -731,7 +731,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rurl"
+name = "rurlr"
 version = "0.2.0"
 dependencies = [
  "chrono",
